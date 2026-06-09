@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1781033933906389695.html"
 	],
 	prefix: "",
 	theme: {
@@ -16,6 +17,10 @@ export default {
 			screens: {
 				'2xl': '1400px'
 			}
+		},
+		fontFamily: {
+			serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+			sans: ['Montserrat', 'sans-serif'],
 		},
 		extend: {
 			colors: {
