@@ -152,7 +152,280 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 opacity-0 animate-fade-in delay-1100" style={{ animationFillMode: 'forwards' }}>
+            {/* City skyline with blinking windows */}
+            <div className="absolute bottom-0 left-0 right-0 z-10 opacity-0 animate-fade-in delay-900" style={{ animationFillMode: 'forwards' }}>
+              <svg viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style={{ display: 'block', width: '100%' }}>
+                {/* Gradient fog at bottom */}
+                <defs>
+                  <linearGradient id="skyFade" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#0E0A06" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#0E0A06" stopOpacity="1" />
+                  </linearGradient>
+                  <linearGradient id="buildingGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#1A1208" />
+                    <stop offset="100%" stopColor="#0A0704" />
+                  </linearGradient>
+                </defs>
+
+                {/* ── Far background buildings (darkest) ── */}
+                <rect x="0"    y="160" width="60"  height="120" fill="#0D0905" />
+                <rect x="55"   y="140" width="45"  height="140" fill="#0D0905" />
+                <rect x="95"   y="155" width="70"  height="125" fill="#0D0905" />
+                <rect x="160"  y="130" width="50"  height="150" fill="#0D0905" />
+                <rect x="205"  y="148" width="80"  height="132" fill="#0D0905" />
+                <rect x="280"  y="135" width="55"  height="145" fill="#0D0905" />
+                <rect x="330"  y="155" width="65"  height="125" fill="#0D0905" />
+                <rect x="390"  y="125" width="45"  height="155" fill="#0D0905" />
+                <rect x="430"  y="145" width="75"  height="135" fill="#0D0905" />
+                <rect x="500"  y="130" width="55"  height="150" fill="#0D0905" />
+                <rect x="550"  y="150" width="90"  height="130" fill="#0D0905" />
+                <rect x="635"  y="120" width="50"  height="160" fill="#0D0905" />
+                <rect x="680"  y="140" width="70"  height="140" fill="#0D0905" />
+                <rect x="745"  y="130" width="55"  height="150" fill="#0D0905" />
+                <rect x="795"  y="148" width="80"  height="132" fill="#0D0905" />
+                <rect x="870"  y="135" width="60"  height="145" fill="#0D0905" />
+                <rect x="925"  y="155" width="50"  height="125" fill="#0D0905" />
+                <rect x="970"  y="125" width="75"  height="155" fill="#0D0905" />
+                <rect x="1040" y="145" width="55"  height="135" fill="#0D0905" />
+                <rect x="1090" y="130" width="85"  height="150" fill="#0D0905" />
+                <rect x="1170" y="150" width="60"  height="130" fill="#0D0905" />
+                <rect x="1225" y="125" width="50"  height="155" fill="#0D0905" />
+                <rect x="1270" y="140" width="80"  height="140" fill="#0D0905" />
+                <rect x="1345" y="130" width="95"  height="150" fill="#0D0905" />
+
+                {/* ── Mid buildings ── */}
+                {/* Building A — tall narrow */}
+                <rect x="20"   y="110" width="38"  height="170" fill="url(#buildingGrad)" />
+                <rect x="20"   y="100" width="38"  height="12"  fill="#1C1208" /> {/* roof detail */}
+                {/* Windows A */}
+                <rect x="27" y="118" width="8" height="10" className="win-3"  fill="#FFD98A" />
+                <rect x="41" y="118" width="8" height="10" className="win-7"  fill="#FFC46B" />
+                <rect x="27" y="134" width="8" height="10" className="win-12" fill="#FFD98A" />
+                <rect x="41" y="134" width="8" height="10" className="win-1"  fill="#FFC46B" />
+                <rect x="27" y="150" width="8" height="10" className="win-5"  fill="#FFD98A" />
+                <rect x="41" y="150" width="8" height="10" className="win-9"  fill="#FFC46B" />
+                <rect x="27" y="166" width="8" height="10" className="win-14" fill="#FFD98A" />
+                <rect x="41" y="166" width="8" height="10" className="win-2"  fill="#FFC46B" />
+
+                {/* Building B — wide blocky */}
+                <rect x="80"  y="90"  width="90"  height="190" fill="url(#buildingGrad)" />
+                <rect x="80"  y="82"  width="90"  height="10"  fill="#1C1208" />
+                <rect x="112" y="78"  width="26"  height="14"  fill="#161008" /> {/* antenna base */}
+                <rect x="123" y="55"  width="4"   height="25"  fill="#161008" /> {/* antenna */}
+                {/* Windows B */}
+                <rect x="88"  y="100" width="10" height="12" className="win-6"  fill="#FFD98A" />
+                <rect x="104" y="100" width="10" height="12" className="win-11" fill="#FFC46B" />
+                <rect x="120" y="100" width="10" height="12" className="win-4"  fill="#FFD98A" />
+                <rect x="136" y="100" width="10" height="12" className="win-15" fill="#FFC46B" />
+                <rect x="152" y="100" width="10" height="12" className="win-8"  fill="#FFD98A" />
+                <rect x="88"  y="120" width="10" height="12" className="win-2"  fill="#FFC46B" />
+                <rect x="104" y="120" width="10" height="12" className="win-9"  fill="#FFD98A" />
+                <rect x="120" y="120" width="10" height="12" className="win-13" fill="#FFC46B" />
+                <rect x="136" y="120" width="10" height="12" className="win-1"  fill="#FFD98A" />
+                <rect x="152" y="120" width="10" height="12" className="win-7"  fill="#FFC46B" />
+                <rect x="88"  y="140" width="10" height="12" className="win-16" fill="#FFD98A" />
+                <rect x="104" y="140" width="10" height="12" className="win-5"  fill="#FFC46B" />
+                <rect x="120" y="140" width="10" height="12" className="win-10" fill="#FFD98A" />
+                <rect x="136" y="140" width="10" height="12" className="win-3"  fill="#FFC46B" />
+                <rect x="152" y="140" width="10" height="12" className="win-18" fill="#FFD98A" />
+                <rect x="88"  y="160" width="10" height="12" className="win-14" fill="#FFC46B" />
+                <rect x="104" y="160" width="10" height="12" className="win-20" fill="#FFD98A" />
+                <rect x="120" y="160" width="10" height="12" className="win-6"  fill="#FFC46B" />
+                <rect x="136" y="160" width="10" height="12" className="win-17" fill="#FFD98A" />
+                <rect x="152" y="160" width="10" height="12" className="win-11" fill="#FFC46B" />
+
+                {/* Building C — medium */}
+                <rect x="200" y="105" width="55"  height="175" fill="url(#buildingGrad)" />
+                <rect x="200" y="97"  width="55"  height="10"  fill="#1C1208" />
+                {/* Windows C */}
+                <rect x="208" y="113" width="9" height="11" className="win-4"  fill="#FFD98A" />
+                <rect x="223" y="113" width="9" height="11" className="win-19" fill="#FFC46B" />
+                <rect x="238" y="113" width="9" height="11" className="win-8"  fill="#FFD98A" />
+                <rect x="208" y="131" width="9" height="11" className="win-15" fill="#FFC46B" />
+                <rect x="223" y="131" width="9" height="11" className="win-2"  fill="#FFD98A" />
+                <rect x="238" y="131" width="9" height="11" className="win-12" fill="#FFC46B" />
+                <rect x="208" y="149" width="9" height="11" className="win-7"  fill="#FFD98A" />
+                <rect x="223" y="149" width="9" height="11" className="win-1"  fill="#FFC46B" />
+                <rect x="238" y="149" width="9" height="11" className="win-16" fill="#FFD98A" />
+                <rect x="208" y="167" width="9" height="11" className="win-10" fill="#FFC46B" />
+                <rect x="223" y="167" width="9" height="11" className="win-5"  fill="#FFD98A" />
+                <rect x="238" y="167" width="9" height="11" className="win-20" fill="#FFC46B" />
+
+                {/* Building D — skyscraper center-left */}
+                <rect x="290" y="60"  width="50"  height="220" fill="url(#buildingGrad)" />
+                <rect x="298" y="50"  width="34"  height="12"  fill="#1C1208" />
+                <rect x="313" y="30"  width="5"   height="22"  fill="#1A1008" />
+                {/* Windows D */}
+                <rect x="298" y="70"  width="9" height="11" className="win-3"  fill="#FFD98A" />
+                <rect x="313" y="70"  width="9" height="11" className="win-18" fill="#FFC46B" />
+                <rect x="328" y="70"  width="9" height="11" className="win-6"  fill="#FFD98A" />
+                <rect x="298" y="88"  width="9" height="11" className="win-11" fill="#FFC46B" />
+                <rect x="313" y="88"  width="9" height="11" className="win-2"  fill="#FFD98A" />
+                <rect x="328" y="88"  width="9" height="11" className="win-14" fill="#FFC46B" />
+                <rect x="298" y="106" width="9" height="11" className="win-7"  fill="#FFD98A" />
+                <rect x="313" y="106" width="9" height="11" className="win-9"  fill="#FFC46B" />
+                <rect x="328" y="106" width="9" height="11" className="win-19" fill="#FFD98A" />
+                <rect x="298" y="124" width="9" height="11" className="win-4"  fill="#FFC46B" />
+                <rect x="313" y="124" width="9" height="11" className="win-15" fill="#FFD98A" />
+                <rect x="328" y="124" width="9" height="11" className="win-1"  fill="#FFC46B" />
+                <rect x="298" y="142" width="9" height="11" className="win-12" fill="#FFD98A" />
+                <rect x="313" y="142" width="9" height="11" className="win-5"  fill="#FFC46B" />
+                <rect x="328" y="142" width="9" height="11" className="win-17" fill="#FFD98A" />
+                <rect x="298" y="160" width="9" height="11" className="win-8"  fill="#FFC46B" />
+                <rect x="313" y="160" width="9" height="11" className="win-20" fill="#FFD98A" />
+                <rect x="328" y="160" width="9" height="11" className="win-10" fill="#FFC46B" />
+                <rect x="298" y="178" width="9" height="11" className="win-16" fill="#FFD98A" />
+                <rect x="313" y="178" width="9" height="11" className="win-13" fill="#FFC46B" />
+                <rect x="328" y="178" width="9" height="11" className="win-3"  fill="#FFD98A" />
+
+                {/* Building E — wide low */}
+                <rect x="370" y="130" width="100" height="150" fill="url(#buildingGrad)" />
+                <rect x="370" y="122" width="100" height="10"  fill="#1C1208" />
+                {/* Windows E */}
+                {[0,1,2,3,4].map(col => [0,1,2,3].map(row => (
+                  <rect key={`e-${col}-${row}`}
+                    x={380 + col * 18} y={135 + row * 18}
+                    width="10" height="11"
+                    className={`win-${((col * 4 + row) % 20) + 1}`}
+                    fill="#FFD98A" />
+                )))}
+
+                {/* Building F — tall center */}
+                <rect x="500" y="70"  width="65"  height="210" fill="url(#buildingGrad)" />
+                <rect x="500" y="62"  width="65"  height="10"  fill="#1C1208" />
+                <rect x="520" y="48"  width="25"  height="16"  fill="#161008" />
+                <rect x="530" y="28"  width="5"   height="22"  fill="#161008" />
+                {/* Windows F */}
+                {[0,1,2].map(col => [0,1,2,3,4,5,6,7].map(row => (
+                  <rect key={`f-${col}-${row}`}
+                    x={510 + col * 18} y={78 + row * 18}
+                    width="10" height="12"
+                    className={`win-${((col * 8 + row + 3) % 20) + 1}`}
+                    fill="#FFC46B" />
+                )))}
+
+                {/* Building G — stepped */}
+                <rect x="600" y="110" width="40"  height="170" fill="url(#buildingGrad)" />
+                <rect x="590" y="140" width="60"  height="140" fill="url(#buildingGrad)" />
+                <rect x="600" y="102" width="40"  height="10"  fill="#1C1208" />
+                {/* Windows G */}
+                <rect x="607" y="118" width="8" height="10" className="win-5"  fill="#FFD98A" />
+                <rect x="621" y="118" width="8" height="10" className="win-13" fill="#FFC46B" />
+                <rect x="607" y="134" width="8" height="10" className="win-9"  fill="#FFD98A" />
+                <rect x="621" y="134" width="8" height="10" className="win-2"  fill="#FFC46B" />
+                <rect x="595" y="148" width="8" height="10" className="win-17" fill="#FFD98A" />
+                <rect x="607" y="148" width="8" height="10" className="win-6"  fill="#FFC46B" />
+                <rect x="621" y="148" width="8" height="10" className="win-11" fill="#FFD98A" />
+                <rect x="635" y="148" width="8" height="10" className="win-4"  fill="#FFC46B" />
+                <rect x="595" y="164" width="8" height="10" className="win-19" fill="#FFD98A" />
+                <rect x="635" y="164" width="8" height="10" className="win-1"  fill="#FFC46B" />
+                <rect x="595" y="180" width="8" height="10" className="win-14" fill="#FFD98A" />
+                <rect x="635" y="180" width="8" height="10" className="win-8"  fill="#FFC46B" />
+
+                {/* Building H — tall right-center */}
+                <rect x="680" y="80"  width="55"  height="200" fill="url(#buildingGrad)" />
+                <rect x="680" y="72"  width="55"  height="10"  fill="#1C1208" />
+                {/* Windows H */}
+                {[0,1,2].map(col => [0,1,2,3,4,5,6,7,8].map(row => (
+                  <rect key={`h-${col}-${row}`}
+                    x={689 + col * 16} y={88 + row * 17}
+                    width="9" height="11"
+                    className={`win-${((col * 9 + row + 7) % 20) + 1}`}
+                    fill="#FFD98A" />
+                )))}
+
+                {/* Building I — medium right */}
+                <rect x="770" y="100" width="70"  height="180" fill="url(#buildingGrad)" />
+                <rect x="770" y="92"  width="70"  height="10"  fill="#1C1208" />
+                {/* Windows I */}
+                {[0,1,2,3].map(col => [0,1,2,3,4,5].map(row => (
+                  <rect key={`i-${col}-${row}`}
+                    x={779 + col * 15} y={108 + row * 18}
+                    width="9" height="11"
+                    className={`win-${((col * 6 + row + 11) % 20) + 1}`}
+                    fill="#FFC46B" />
+                )))}
+
+                {/* Building J — wide tower right */}
+                <rect x="875" y="65"  width="75"  height="215" fill="url(#buildingGrad)" />
+                <rect x="875" y="57"  width="75"  height="10"  fill="#1C1208" />
+                <rect x="902" y="43"  width="21"  height="16"  fill="#161008" />
+                <rect x="910" y="22"  width="5"   height="23"  fill="#161008" />
+                {/* Windows J */}
+                {[0,1,2,3].map(col => [0,1,2,3,4,5,6,7,8,9].map(row => (
+                  <rect key={`j-${col}-${row}`}
+                    x={884 + col * 16} y={73 + row * 16}
+                    width="9" height="10"
+                    className={`win-${((col * 10 + row + 2) % 20) + 1}`}
+                    fill="#FFD98A" />
+                )))}
+
+                {/* Building K — right side stack */}
+                <rect x="985"  y="120" width="50"  height="160" fill="url(#buildingGrad)" />
+                <rect x="985"  y="112" width="50"  height="10"  fill="#1C1208" />
+                {/* Windows K */}
+                {[0,1,2].map(col => [0,1,2,3,4].map(row => (
+                  <rect key={`k-${col}-${row}`}
+                    x={993 + col * 14} y={128 + row * 18}
+                    width="9" height="11"
+                    className={`win-${((col * 5 + row + 15) % 20) + 1}`}
+                    fill="#FFC46B" />
+                )))}
+
+                {/* Building L — tall far right */}
+                <rect x="1070" y="75"  width="60"  height="205" fill="url(#buildingGrad)" />
+                <rect x="1070" y="67"  width="60"  height="10"  fill="#1C1208" />
+                {/* Windows L */}
+                {[0,1,2].map(col => [0,1,2,3,4,5,6,7].map(row => (
+                  <rect key={`l-${col}-${row}`}
+                    x={1079 + col * 17} y={83 + row * 18}
+                    width="10" height="11"
+                    className={`win-${((col * 8 + row + 4) % 20) + 1}`}
+                    fill="#FFD98A" />
+                )))}
+
+                {/* Building M — right edge */}
+                <rect x="1170" y="95"  width="80"  height="185" fill="url(#buildingGrad)" />
+                <rect x="1170" y="87"  width="80"  height="10"  fill="#1C1208" />
+                {/* Windows M */}
+                {[0,1,2,3,4].map(col => [0,1,2,3,4,5].map(row => (
+                  <rect key={`m-${col}-${row}`}
+                    x={1179 + col * 14} y={103 + row * 18}
+                    width="9" height="11"
+                    className={`win-${((col * 6 + row + 9) % 20) + 1}`}
+                    fill="#FFC46B" />
+                )))}
+
+                {/* Building N — far right tall */}
+                <rect x="1285" y="85"  width="55"  height="195" fill="url(#buildingGrad)" />
+                <rect x="1285" y="77"  width="55"  height="10"  fill="#1C1208" />
+                {/* Windows N */}
+                {[0,1,2].map(col => [0,1,2,3,4,5,6,7].map(row => (
+                  <rect key={`n-${col}-${row}`}
+                    x={1293 + col * 16} y={93 + row * 17}
+                    width="9" height="11"
+                    className={`win-${((col * 8 + row + 6) % 20) + 1}`}
+                    fill="#FFD98A" />
+                )))}
+
+                {/* Building O — rightmost */}
+                <rect x="1370" y="110" width="70"  height="170" fill="url(#buildingGrad)" />
+                <rect x="1370" y="102" width="70"  height="10"  fill="#1C1208" />
+                {/* Windows O */}
+                {[0,1,2,3].map(col => [0,1,2,3,4].map(row => (
+                  <rect key={`o-${col}-${row}`}
+                    x={1379 + col * 14} y={118 + row * 18}
+                    width="9" height="11"
+                    className={`win-${((col * 5 + row + 13) % 20) + 1}`}
+                    fill="#FFC46B" />
+                )))}
+
+                {/* Ground fog overlay */}
+                <rect x="0" y="200" width="1440" height="80" fill="url(#skyFade)" />
+              </svg>
+            </div>
+
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 opacity-0 animate-fade-in delay-1100" style={{ animationFillMode: 'forwards' }}>
               <div className="flex flex-col items-center gap-2" style={{ color: 'var(--text-muted)' }}>
                 <span style={{ letterSpacing: '0.2em', fontSize: '0.65rem', textTransform: 'uppercase' }}>прокрутите</span>
                 <Icon name="ChevronDown" size={16} />
