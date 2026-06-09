@@ -321,6 +321,20 @@ const Index = () => {
                 </div>
               ))}
             </div>
+
+            {/* Back to home button */}
+            <div className="mt-16 pt-10 text-center" style={{ borderTop: '1px solid rgba(201,151,74,0.12)' }}>
+              <button
+                onClick={() => nav('home')}
+                className="inline-flex items-center gap-3 transition-all duration-300 group"
+                style={{ color: 'var(--text-muted)' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
+              >
+                <Icon name="ArrowLeft" size={16} />
+                <span className="font-serif italic text-base">Вернуться на главную</span>
+              </button>
+            </div>
           </div>
         </main>
       )}
